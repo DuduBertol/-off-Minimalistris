@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public bool upClick;
     public bool downClick;
     public bool leftClick;
     public bool rightClick;
@@ -22,6 +23,10 @@ public class GameManager : MonoBehaviour
         
     }
 
+    public void UpButton()
+    {
+        upClick = true;
+    }
     public void DownButton()
     {
         downClick = true;

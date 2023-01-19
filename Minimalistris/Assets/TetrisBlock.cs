@@ -68,6 +68,25 @@ public class TetrisBlock : MonoBehaviour
             previousTime = Time.time;
             gameManager.downClick = false;
         }
+
+        if(gameManager.upClick)
+        {
+            fallTime = 0;
+            transform.position += new Vector3(0, -1, 0);
+            if(!ValidMove())
+            {
+                transform.position -= new Vector3(0, -1, 0);
+                AddToGrid();
+                CheckForLines();
+
+                this.enabled = false;
+                FindObjectOfType<SpawnTetromino>().NewTetromino();
+            }  
+            previousTime = Time.time;
+            gameManager.upClick = false;
+        }
+
+
     }
 
     void CheckForLines()
