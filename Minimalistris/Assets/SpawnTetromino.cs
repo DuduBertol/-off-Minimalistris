@@ -4,21 +4,23 @@ using UnityEngine;
 
 public class SpawnTetromino : MonoBehaviour
 {
-    public GameObject[] Tetrominoes;
+    public GameObject[] tetrominoes;
+    public GameObject[] ghostTetrominoes;
     public List<GameObject> imagesTetrominoes = new List<GameObject>();
     private int nextTetromino;
 
     // Start is called before the first frame update
     void Start()
     {
-        nextTetromino = Random.Range(0, Tetrominoes.Length);
+        nextTetromino = Random.Range(0, tetrominoes.Length);
         NewTetromino();
     }
 
     public void NewTetromino()
     {
-        Instantiate(Tetrominoes[nextTetromino], transform.position, Quaternion.identity);
-        nextTetromino = Random.Range(0, Tetrominoes.Length);
+        Instantiate(tetrominoes[3], transform.position, Quaternion.identity);
+        Instantiate(ghostTetrominoes[3], transform.position, Quaternion.identity);
+        nextTetromino = Random.Range(0, tetrominoes.Length);
 
         for(int i = 0; i < imagesTetrominoes.Count; i++)
         {

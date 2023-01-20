@@ -45,11 +45,11 @@ public class TetrisBlock : MonoBehaviour
         //ROTATE
         if(gameManager.circleClick)
         {
-            transform.RotateAround(transform.TransformPoint(rotationPoint), new Vector3 (0, 0, 1), 90);
+            transform.RotateAround(transform.TransformPoint(rotationPoint), new Vector3 (0, 0, 1), -90);
             gameManager.circleClick = false;
              if(!ValidMove())
             {
-                transform.RotateAround(transform.TransformPoint(rotationPoint), new Vector3 (0, 0, 1), -90);
+                transform.RotateAround(transform.TransformPoint(rotationPoint), new Vector3 (0, 0, 1), 90);
             } 
         }
 
