@@ -1,2 +1,2 @@
 # Minimalistris
-Minimalist Tetris Mobile Game | Source Code
+Minimalist Tetris Mobile Prototype | Stopped for now | Source Code
